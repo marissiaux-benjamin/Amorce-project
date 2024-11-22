@@ -1,0 +1,18 @@
+@import "variables";
+
+.wrapper{
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.yellow-background{
+    background-color: $main-color;
+}
+
+.active{
+    background-color: #2E2E2E;
+    color: #FCC940;
+    text-align: center;
+}
+
+

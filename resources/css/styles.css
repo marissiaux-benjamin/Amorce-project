@@ -1,0 +1,16 @@
+.wrapper {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.yellow-background {
+  background-color: #FCC940;
+}
+
+.active {
+  background-color: #2E2E2E;
+  color: #FCC940;
+  text-align: center;
+}
+
+/*# sourceMappingURL=styles.css.map */
