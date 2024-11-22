@@ -58,7 +58,7 @@
                 <tr class="relative mb-32 h-20 shadow-lg rounded-xl">
                     <td class="bg-[#DADADA] rounded-l-xl pl-10">
                         <a href="#" class="absolute top-0 right-0 left-0 bottom-0 w-3/4 hover:underline indent-10 pt-7">
-                            {{ $compte->name }}
+                            {{ $compte->name }} lala
                         </a>
                     </td>
                     <td class="bg-[#DADADA]">
