@@ -4,7 +4,7 @@
         @csrf
 
         <button type="submit"
-                class="{{ $bg_color }} {{ $text_color }} rounded-xl py-1 px-10 hover:scale-105 transition-all ">
+                class="{{ $bg_color }} {{ $text_color }} rounded-xl py-1 px-10 hover:scale-105 transition-all">
             {{ $text }}
         </button>
     </form>

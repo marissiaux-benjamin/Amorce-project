@@ -40,7 +40,7 @@
 
         <div class="flex gap-5">
             <x-buttons.transfert action="#"/>
-            <x-buttons.new-account action="#"/>
+            <livewire:add-button/>
         </div>
     </div>
     <section class=" w-full grid mt-10 mb-5">
@@ -58,7 +58,7 @@
                 <tr class="relative mb-32 h-20 shadow-lg rounded-xl">
                     <td class="bg-[#DADADA] rounded-l-xl pl-10">
                         <a href="#" class="absolute top-0 right-0 left-0 bottom-0 w-3/4 hover:underline indent-10 pt-7">
-                            {{ $compte->name }} lala
+                            {{ $compte->name }}
                         </a>
                     </td>
                     <td class="bg-[#DADADA]">
@@ -68,7 +68,8 @@
                         <span class="font-bold">Ajout récent&nbsp;:</span> {{ $compte->ajouts_recent }}&nbsp;€
                     </td>
                     <td class="bg-[#DADADA] rounded-r-xl">
-                        <x-buttons.delete-button route="{{ route('compte.destroy',$compte->id) }}" bg_color="bg-[#2E2E2E]" text_color="text-[#FCC940]" text="Supprimer"/>
+                        <x-buttons.delete-button route="{{ route('compte.destroy',$compte->id) }}"
+                                                 bg_color="bg-[#2E2E2E]" text_color="text-[#FCC940]" text="Supprimer"/>
                     </td>
                 </tr>
             @endforeach
@@ -78,4 +79,5 @@
     <div class="mb-24">
         {{ $comptes->links('pagination::tailwind') }}
     </div>
+    <livewire:create-account-modal/>
 </x-app-layout>

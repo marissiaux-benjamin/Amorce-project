@@ -11,7 +11,6 @@ class CompteController extends Controller
     public function index()
     {
 
-
         //$comptes= Compte::all();
 
         $comptes = Compte::orderBy('name')
@@ -20,6 +19,13 @@ class CompteController extends Controller
         return view('comptes.index', compact('comptes'));
 
     }
+
+    public function create()
+    {
+
+        return view('livewire.create-account-modal');
+    }
+
     public function destroy(Compte $compte)
     {
 
