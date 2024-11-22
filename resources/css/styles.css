@@ -13,4 +13,10 @@
   text-align: center;
 }
 
+.blurred-background {
+  background-color: #2E2E2E;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
 /*# sourceMappingURL=styles.css.map */

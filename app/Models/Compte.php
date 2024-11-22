@@ -9,15 +9,15 @@ class Compte extends Model
 {
     /** @use HasFactory<\Database\Factories\ComptesSpecificFactory> */
     use HasFactory;
-
     protected $fillable = [
         'name',
         'total',
-        'ajouts_recent'
     ];
 
-    public function get_comptes()
+
+
+    public function transactions()
     {
-        return $this->hasMany(Compte::class);
+        return $this->hasMany(Transactions::class);
     }
 }

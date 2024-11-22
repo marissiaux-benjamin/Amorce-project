@@ -11,9 +11,8 @@ class CompteFactory extends Factory
     public function definition(): array
     {
         return [
-            'name'=> $this->faker->name(),
+            'name'=> $this->faker->company(),
             'total'=> $this->faker->numberBetween(800,2000),
-            'ajouts_recent'=> $this->faker->numberBetween(50,400),
         ];
     }
 }

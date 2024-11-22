@@ -12,6 +12,8 @@ Route::get('/comptes', [CompteController::class, 'index'])->middleware(['auth', 
 Route::get('/comptes/create', [CompteController::class, 'create'])->middleware(['auth', 'verified'])->name('compte.create');
 Route::delete('/comptes/{compte}', [CompteController::class, 'destroy'])->middleware(['auth', 'verified'])->name('compte.destroy');
 
+Route::get('/comptes/{compte}', [CompteController::class, 'show'])->middleware(['auth', 'verified'])->name('compte.show');
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

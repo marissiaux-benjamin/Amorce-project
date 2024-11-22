@@ -15,4 +15,10 @@
     text-align: center;
 }
 
+.blurred-background{
+    background-color: $dark-button-color;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
 
