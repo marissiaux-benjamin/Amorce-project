@@ -1,6 +1,7 @@
 <?php
 
 namespace Database\Factories;
+
 use App\Models\Compte;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -11,8 +12,9 @@ class CompteFactory extends Factory
     public function definition(): array
     {
         return [
-            'name'=> $this->faker->company(),
-            'total'=> $this->faker->numberBetween(800,2000),
+            'name' => $this->faker->company(),
+            'total' => $this->faker->numberBetween(800, 2000),
+            'description' => $this->faker->realText(),
         ];
     }
 }

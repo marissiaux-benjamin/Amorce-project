@@ -6,16 +6,17 @@ use App\Models\Compte;
 use App\Models\Jiri;
 use App\Models\Transactions;
 use Illuminate\Http\Request;
+use Livewire\WithPagination;
 
 class CompteController extends Controller
 {
+    use WithPagination;
     public function index()
     {
 
         $comptes = Compte::all();
 
-        $comptes = Compte::orderBy('name')
-            ->paginate(5);
+        $comptes = Compte::orderBy('id')->get();
 
 
         return view('comptes.index', compact('comptes'));
@@ -24,7 +25,7 @@ class CompteController extends Controller
 
     public function show(Compte $compte)
     {
-        $transactions = Transactions::all(); //mettre les transactions liées au compte.
+        $transactions = $compte->transactions;
         return view('comptes.show', compact('compte', 'transactions'));
     }
 

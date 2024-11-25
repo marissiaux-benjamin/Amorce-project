@@ -1,5 +1,18 @@
 <x-app-layout>
-    <div content="" class="m-auto w-full h-1 rounded-full mt-24 mb-20 bg-[rgba(46,46,46,0.20)]"></div>
+    <section class="mt-16">
+        <div class="flex flex-row gap-32 items-center mb-8">
+            <h1 class="text-4xl font-bold">
+                {{ $compte->name }}
+            </h1>
+            <p class="font-bold text-4xl">
+                <span class="text-2xl"> Total&nbsp;: </span>{{ $compte->total }} €
+            </p>
+        </div>
+        <p>
+            {{ $compte->description }}
+        </p>
+    </section>
+    <div content="" class="m-auto w-full h-1 rounded-full mt-8 mb-16 bg-[rgba(46,46,46,0.20)]"></div>
     <div class="flex justify-between items-center mr-4 w-full rounded-xl">
         <div class="w-1/2">
             <form x-data="{searchButton:true}" class="flex w-full rounded-xl">
@@ -34,41 +47,7 @@
             <livewire:add-button/>
         </div>
     </div>
-    <section class=" w-full grid mt-10 mb-5">
-        <table class="border-separate border-spacing-y-5">
-            <thead>
-            <tr class="text-left font-bold">
-                <th class="pr-32 pl-10">Date</th>
-                <th class="pr-40">Communication</th>
-                <th class="pr-40">Montant</th>
-                <th>&nbsp;</th>
-            </tr>
-            </thead>
-            <tbody>
-            @foreach($transactions as $transaction)
-                <tr class="relative mb-32 h-20 shadow-lg rounded-xl">
-                    <td class="bg-[#DADADA] rounded-l-xl pl-10">
-                        <a href="#" class="absolute top-0 right-0 left-0 bottom-0 w-3/4 hover:underline indent-10 pt-7">
-                            {{ $transaction->date }}
-                        </a>
-                    </td>
-                    <td class="bg-[#DADADA]">
-                        <span class="font-bold">Communication&nbsp;:</span> {{ $transaction->communication }}
-                    </td>
-                    <td class="bg-[#DADADA]">
-                        <span class="font-bold">Montant&nbsp;:</span>{{ $transaction->montant }}&nbsp;€
-                    </td>
-                    <td class="bg-[#DADADA] rounded-r-xl">
-                        <x-buttons.delete-button route="{{ route('compte.destroy',$transaction->id) }}"
-                                                 bg_color="bg-[#2E2E2E]" text_color="text-[#FCC940]" text="Supprimer"/>
-                    </td>
-                </tr>
-            @endforeach
-            </tbody>
-        </table>
-    </section>
-   <!-- <div class="mb-24">
+    <livewire:transactions :$compte :$transactions/>
 
-    </div>-->
     <livewire:create-account-modal/>
 </x-app-layout>

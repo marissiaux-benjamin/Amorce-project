@@ -5,5 +5,4 @@
         <path d="M3 3L28 28" stroke="black" stroke-width="5" stroke-linecap="round"/>
         <path d="M28 3L3 28" stroke="black" stroke-width="5" stroke-linecap="round"/>
     </svg>
-
 </button>

@@ -10,13 +10,12 @@ return new class extends Migration {
      */
     public function up(): void
     {
-        Schema::create('comptes', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->text('description')->nullable();
-            $table->bigInteger('total');
-            $table->timestamps();
+        Schema::table('transactions', function (Blueprint $table) {
+            $table->foreign('compte_id')->references('id')->on('comptes')->onDelete('cascade');
         });
+
+
+
     }
 
     /**
@@ -24,6 +23,11 @@ return new class extends Migration {
      */
     public function down(): void
     {
-        Schema::dropIfExists('compte');
+        Schema::table('transactions', function (Blueprint $table) {
+            $table->dropForeign('compte_id')->onDelete('cascade');
+        });
+
+
+
     }
 };
