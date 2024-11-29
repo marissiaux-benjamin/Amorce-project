@@ -32,7 +32,7 @@ class CompteController extends Controller
     public function create()
     {
 
-        return view('livewire.create-account-modal');
+        return view('livewire.create-modal');
     }
 
     public function destroy(Compte $compte)

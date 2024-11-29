@@ -7,6 +7,9 @@
             <p class="font-bold text-4xl">
                 <span class="text-2xl"> Total&nbsp;: </span>{{ $compte->total }} €
             </p>
+            @if($compte->id !== 1 && $compte->id !== 2)
+                <livewire:delete-confirmation-button/>
+            @endif
         </div>
         <p>
             {{ $compte->description }}
@@ -43,11 +46,13 @@
         </div>
 
         <div class="flex gap-5">
-            <x-buttons.transfert action="#"/>
+            <livewire:transfert-button/>
             <livewire:add-button/>
         </div>
     </div>
     <livewire:transactions :$compte :$transactions/>
 
-    <livewire:create-account-modal/>
+    <livewire:create-modal/>
+    <livewire:confirmation-modal/>
+    <livewire:new-transfer-modal/>
 </x-app-layout>

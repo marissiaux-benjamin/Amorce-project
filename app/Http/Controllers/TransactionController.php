@@ -23,7 +23,7 @@ class TransactionController extends Controller
 
     public function create()
     {
-        return view('livewire.create-account-modal');
+        return view('livewire.create-modal');
     }
 
     public function store(TransactionStoreRequest $request)

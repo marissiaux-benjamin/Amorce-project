@@ -6,7 +6,7 @@
         </h1>
         <div class="grid md:grid-cols-2 gap-6 w-full">
             @foreach($comptes as $compte)
-                <a href="/comptes/{{ $compte->id }}" class="">
+                <a href="/comptes/{{ $compte->id }}" class="hover:scale-105 transition-all">
                     <x-cartes.grosse-cartes nom_fond="{{ $compte->name }}" solde="{{ $compte->total }}" ajout=""/>
                 </a>
             @endforeach
