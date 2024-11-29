@@ -14,8 +14,6 @@ class Compte extends Model
         'total',
     ];
 
-
-
     public function transactions()
     {
         return $this->hasMany(Transactions::class);

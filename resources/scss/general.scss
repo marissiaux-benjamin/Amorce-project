@@ -21,4 +21,17 @@
     -webkit-backdrop-filter: blur(10px);
 }
 
+.scale:hover{
+    transform: scale(1.02);
+}
+
+.icon-plus {
+    stroke: #7C7C7C;
+}
+
+
+.group:hover .icon-plus {
+    stroke: #2C2C2C;
+}
+
 

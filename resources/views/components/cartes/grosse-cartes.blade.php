@@ -9,6 +9,5 @@
         <p>
             <span class="font-bold text-lg">Ajout récent&nbsp;:</span> {{ $ajout }}€
         </p>
-
     </div>
 </div>

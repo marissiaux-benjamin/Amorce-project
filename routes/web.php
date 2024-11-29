@@ -1,8 +1,6 @@
 <?php
 
-use App\Http\Controllers\CompteController;
 use App\Http\Controllers\ProfileController;
-use App\Models\Transactions;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -18,3 +16,4 @@ Route::middleware('auth')->group(function () {
 require __DIR__ . '/auth.php';
 require __DIR__.'/comptes.php';
 require __DIR__.'/transactions.php';
+require __DIR__.'/detentes.php';
