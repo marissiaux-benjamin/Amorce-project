@@ -14,7 +14,7 @@ return new class extends Migration {
             $table->id();
             $table->string('name');
             $table->text('description')->nullable();
-            $table->bigInteger('total');
+            $table->bigInteger('total')->nullable();
             $table->timestamps();
         });
     }

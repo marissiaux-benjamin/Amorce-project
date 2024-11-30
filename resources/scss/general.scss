@@ -29,9 +29,18 @@
     stroke: #7C7C7C;
 }
 
-
 .group:hover .icon-plus {
     stroke: #2C2C2C;
+}
+
+.back-button-space{
+    right: 3.5rem;
+    transition: all;
+    transition-duration: 300ms;
+}
+
+.back-button:hover .back-button-space{
+    right: 4rem;
 }
 
 

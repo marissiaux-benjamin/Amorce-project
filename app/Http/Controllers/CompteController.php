@@ -19,20 +19,20 @@ class CompteController extends Controller
         $comptes = Compte::orderBy('id')->get();
 
 
-        return view('comptes.index', compact('comptes'));
+        return view('livewire.comptes.index', compact('comptes'));
 
     }
 
     public function show(Compte $compte)
     {
         $transactions = $compte->transactions;
-        return view('comptes.show', compact('compte', 'transactions'));
+        return view('livewire.comptes.show', compact('compte', 'transactions'));
     }
 
     public function create()
     {
 
-        return view('livewire.create-modal');
+        return view('livewire.modals.add-account-modal');
     }
 
     public function destroy(Compte $compte)

@@ -10,7 +10,7 @@
     <section class="flex flex-col justify-center w-1/2 h-full bg-[#E9E9E9] px-16 relative">
         <h1 class="font-bold text-6xl mb-8">Ajouter un compte</h1>
         <x-buttons.cross-button route="{{ route('comptes.index') }}" position_x="top-8" position_y="left-16"/>
-        <x-forms.add-account-form action="" method="POST"/>
+        <livewire:comptes-create/>
     </section>
 </div>
 
