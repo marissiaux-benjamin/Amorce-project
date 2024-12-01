@@ -17,3 +17,4 @@ require __DIR__ . '/auth.php';
 require __DIR__.'/comptes.php';
 require __DIR__.'/transactions.php';
 require __DIR__.'/detentes.php';
+require __DIR__.'/projets.php';

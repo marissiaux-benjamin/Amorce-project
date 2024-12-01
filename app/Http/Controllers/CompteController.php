@@ -4,8 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Compte;
 use App\Models\Jiri;
-use App\Models\Transactions;
-use Illuminate\Http\Request;
 use Livewire\WithPagination;
 
 class CompteController extends Controller

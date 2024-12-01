@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Compte;
+use App\Models\Projets;
 use App\Models\Transactions;
 use App\Models\transactions_comptes;
 use App\Models\User;
@@ -41,6 +42,8 @@ class DatabaseSeeder extends Seeder
             $transaction->compte_id = Compte::all()->random()->id;
             $transaction->save();
         }
+
+        Projets::factory(15)->create();
 
     }
 }
