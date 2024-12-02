@@ -6,8 +6,9 @@ use App\Models\Compte;
 use Livewire\Attributes\Validate;
 use Livewire\Form;
 
-class ComptesCreateForm extends Form
+class ComptesForm extends Form
 {
+    #[Validate]
     public $name;
     #[Validate]
     public $description;
@@ -41,4 +42,11 @@ class ComptesCreateForm extends Form
         $this->validate();
         Compte::create($this->all());
     }
+
+    public function update()
+    {
+        $this->validate();
+        Compte::create($this->all());
+    }
+
 }

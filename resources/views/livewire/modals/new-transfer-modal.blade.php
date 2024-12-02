@@ -13,20 +13,20 @@
             @csrf
             <div class="flex gap-10">
                 <div class="flex flex-col flex-1 mb-6">
-                    <label class="mb-2 text-lg font-bold">
+                    <label class="mb-2 text-lg font-bold" for="de">
                         De
                     </label>
-                    <select class="border-2 py-3 px-6 rounded-xl text-[#2E2E2E] bg-transparent">
+                    <select class="border-2 py-3 px-6 rounded-xl text-[#2E2E2E] bg-transparent" name="de" id="de">
                         @foreach($comptes as $compte)
                             <option value="{{ $compte->name }}">{{ $compte->name }}</option>
                         @endforeach
                     </select>
                 </div>
                 <div class="flex flex-col flex-1 mb-6">
-                    <label class="mb-2 text-lg font-bold">
+                    <label class="mb-2 text-lg font-bold" for="destination">
                         Vers
                     </label>
-                    <select class="border-2 py-3 px-6 rounded-xl text-[#2E2E2E] bg-transparent">
+                    <select class="border-2 py-3 px-6 rounded-xl text-[#2E2E2E] bg-transparent" name="destination" id="destination">
                         <option></option>
                         @foreach($comptes as $compte)
                             <option value="{{ $compte->name }}">{{ $compte->name }}</option>
@@ -34,8 +34,8 @@
                     </select>
                 </div>
             </div>
-            <x-inputs.input-and-label-number label_text="Montant" type="number" placeholder="ex: 20"/>
-            <x-inputs.textarea-and-label label_text="Communication" type="text" placeholder="Argent attribué par la détente"/>
+            <x-inputs.input-and-label-number label_text="Montant" type="number" placeholder="ex: 20" field="" for="amount" name="amount" id="amount"/>
+            <x-inputs.textarea-and-label label_text="Communication" type="text" placeholder="Argent attribué par la détente" field="" for="communication" name="communication" id="communication"/>
             <x-buttons.form-button text="Enregistrer"/>
         </form>
         <x-buttons.cross-button route="{{ route('comptes.index') }}" position_x="top-8" position_y="left-16"/>

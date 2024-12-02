@@ -11,6 +11,7 @@ class Compte extends Model
     use HasFactory;
     protected $fillable = [
         'name',
+        'description',
         'total',
     ];
 

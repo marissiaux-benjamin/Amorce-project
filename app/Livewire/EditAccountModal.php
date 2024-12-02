@@ -4,7 +4,7 @@ namespace App\Livewire;
 
 use Livewire\Component;
 
-class ModifyAccountModal extends Component
+class EditAccountModal extends Component
 {
 
     public $isOpened = false;
@@ -21,6 +21,6 @@ class ModifyAccountModal extends Component
     }
     public function render()
     {
-        return view('livewire.modals.modify-account-modal');
+        return view('livewire.modals.edit-account-modal');
     }
 }
