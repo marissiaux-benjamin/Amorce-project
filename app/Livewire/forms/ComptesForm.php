@@ -8,14 +8,15 @@ use Livewire\Form;
 
 class ComptesForm extends Form
 {
+    public $compte;
     #[Validate]
     public $name;
     #[Validate]
     public $description;
 
-    #[Validate]
     public function setCompte(Compte $compte)
     {
+        $this->compte = $compte;
         $this->name = $compte->name;
         $this->description = $compte->description;
     }
@@ -24,7 +25,7 @@ class ComptesForm extends Form
     {
         return [
             "name" => ["required", "max:100"],
-            "description" => ["required", "max:500"],
+            "description" => ["max:500"],
         ];
     }
 
@@ -46,7 +47,7 @@ class ComptesForm extends Form
     public function update()
     {
         $this->validate();
-        Compte::create($this->all());
+        $this->compte->update($this->all());
     }
 
 }

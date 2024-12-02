@@ -12,7 +12,6 @@ class Compte extends Model
     protected $fillable = [
         'name',
         'description',
-        'total',
     ];
 
     public function transactions()

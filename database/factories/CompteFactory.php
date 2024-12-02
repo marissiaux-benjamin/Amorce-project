@@ -13,7 +13,6 @@ class CompteFactory extends Factory
     {
         return [
             'name' => $this->faker->company(),
-            'total' => $this->faker->numberBetween(800, 2000),
             'description' => $this->faker->realText(),
         ];
     }

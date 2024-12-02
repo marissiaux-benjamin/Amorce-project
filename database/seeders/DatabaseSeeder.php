@@ -26,11 +26,9 @@ class DatabaseSeeder extends Seeder
 
         Compte::factory()->create([
             'name' => 'Fond Général',
-            'total' => random_int(2000, 6000),
         ]);
         Compte::factory()->create([
             'name' => 'Fond de fonctionnement',
-            'total' => random_int(1000, 6000),
         ]);
 
         Compte::factory(4)->create();
