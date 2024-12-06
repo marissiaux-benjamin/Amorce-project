@@ -34,7 +34,7 @@ class EditAccountModal extends Component
     public function save()
     {
         $this->form->update();
-        $this->feedback = "Le compte à bie n été modifié";
+        $this->feedback = "Le compte à bien été modifié";
         $this->dispatch('accountUpdated', id: $this->compte->id);
     }
 
