@@ -47,7 +47,7 @@
                 <x-inputs.textarea-and-label label_text="Description"
                                              placeholder="exemple: Asbl qui vise a améliorer les ruches de Belgique."
                                              field="form.description"/>
-                <x-buttons.form-button text="Enregistrer"/>
+                <x-buttons.form-button text="Enregistrer" />
             </form>
         </div>
     </section>

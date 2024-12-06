@@ -10,7 +10,6 @@ class EditAccountModal extends Component
 {
     public $feedback;
     public $compte;
-
     public $isOpened = false;
     protected $listeners = ['openModal' => 'openModal'];
 
@@ -36,6 +35,7 @@ class EditAccountModal extends Component
     {
         $this->form->update();
         $this->feedback = "Le compte à bie n été modifié";
+        $this->dispatch('accountUpdated', id: $this->compte->id);
     }
 
     public function render()
