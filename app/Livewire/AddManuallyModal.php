@@ -4,7 +4,7 @@ namespace App\Livewire;
 
 use Livewire\Component;
 
-class CreateTransactionModal extends Component
+class AddManuallyModal extends Component
 {
     public $isOpened = false;
     protected $listeners = ['openModal' => 'openModal'];
@@ -22,6 +22,6 @@ class CreateTransactionModal extends Component
 
     public function render()
     {
-        return view('livewire.modals.create-transaction-modal');
+        return view('livewire.modals.add-manually-modal');
     }
 }
