@@ -11,7 +11,6 @@
         <h1 class="font-bold text-6xl mb-8">Ajout manuel</h1>
         <x-buttons.cross-button route="{{ route('comptes.index') }}" position_x="top-8" position_y="left-16"/>
         <form wire:submit="save">
-            @csrf
             <x-inputs.input-and-label label_text="Date" type="date" placeholder="ex: 12/09/2024" field="" for="date" name="date" id="date"/>
             <x-inputs.input-and-label-number label_text="Montant" type="number" placeholder="ex: 20" field="" for="amount" name="amount" id="amount"/>
             <x-inputs.textarea-and-label label_text="Communication"
