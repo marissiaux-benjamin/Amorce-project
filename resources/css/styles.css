@@ -41,4 +41,9 @@
   right: 4rem;
 }
 
+.sticky-own {
+  position: sticky;
+  top: 10px;
+}
+
 /*# sourceMappingURL=styles.css.map */

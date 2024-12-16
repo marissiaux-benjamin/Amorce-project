@@ -34,7 +34,7 @@ class DatabaseSeeder extends Seeder
         Compte::factory(4)->create();
 
 
-        $transactions = Transaction::factory(100)->create();
+        $transactions = Transaction::factory(400)->create();
 
         foreach ($transactions as $transaction) {
             $transaction->compte_id = Compte::all()->random()->id;
