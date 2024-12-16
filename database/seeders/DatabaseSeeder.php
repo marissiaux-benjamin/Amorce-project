@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Compte;
 use App\Models\Projets;
-use App\Models\Transactions;
+use App\Models\Transaction;
 use App\Models\transactions_comptes;
 use App\Models\User;
 use Illuminate\Database\Seeder;
@@ -34,7 +34,7 @@ class DatabaseSeeder extends Seeder
         Compte::factory(4)->create();
 
 
-        $transactions = Transactions::factory(100)->create();
+        $transactions = Transaction::factory(100)->create();
 
         foreach ($transactions as $transaction) {
             $transaction->compte_id = Compte::all()->random()->id;

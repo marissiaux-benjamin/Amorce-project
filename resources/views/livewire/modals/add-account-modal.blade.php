@@ -21,7 +21,8 @@
     },2000)
     }
     }">
-                    <div class="absolute top-24 flex items-center justify-between mb-8 max-w-3xl bg-[#47B134] rounded pr-8">
+                    <div
+                        class="absolute top-24 flex items-center justify-between mb-8 max-w-3xl bg-[#47B134] rounded pr-8">
                         <div class="flex items-center">
                             <svg class="shrink-0 ml-4 mr-2 w-4 h-4 fill-white" xmlns="http://www.w3.org/2000/svg"
                                  viewBox="0 0 20 20">
@@ -33,11 +34,12 @@
                 </div>
             </template>
             <form wire:submit="save">
-                <x-inputs.input-and-label label_text="Nom" type="text" placeholder="nom: Robert Industries" field="form.name"/>
+                <x-inputs.input-and-label label_text="Nom" type="text" placeholder="nom: Robert Industries"
+                                          field="form.name"/>
                 <x-inputs.textarea-and-label label_text="Description"
                                              placeholder="exemple: Asbl qui vise a améliorer les ruches de Belgique."
                                              field="form.description"/>
-                <x-buttons.form-button text="Enregistrer" />
+                <x-buttons.form-button text="Enregistrer"/>
             </form>
         </div>
 

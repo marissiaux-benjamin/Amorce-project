@@ -2,15 +2,18 @@
 
 namespace App\Livewire\forms;
 
-use App\Models\Transactions;
+use App\Models\Transaction;
+use Livewire\Attributes\On;
 use Livewire\Form;
 
 class TransactionsForm extends Form
 {
     public $transactions;
 
-    public function delete(Transactions $transaction)
+
+    public function delete(Transaction $transaction)
     {
-        return $transaction->delete();
+        $transaction->delete();
+        //apres la suppression faire qqchose. c'est ici qu'on le fait.
     }
 }

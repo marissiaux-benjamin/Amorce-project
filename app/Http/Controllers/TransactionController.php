@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\TransactionStoreRequest;
 use App\Models\Compte;
-use App\Models\Transactions;
+use App\Models\Transaction;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 
@@ -12,18 +12,18 @@ class TransactionController extends Controller
 {
     public function index()
     {
-        return view('comptes.show');
+        return view('livewire.comptes.show');
     }
 
     public function show(Compte $compte)
     {
-        $transactions = Transactions::all();
+        $transactions = Transaction::all();
         return to_route('compte.show', compact('transactions'));
     }
 
     public function create()
     {
-        return view('livewire.create-modal');
+        return view('livewire.modals.add-manually-modal');
     }
 
     public function store(TransactionStoreRequest $request)
@@ -32,7 +32,7 @@ class TransactionController extends Controller
         to_route('compte.show');
     }
 
-    public function destroy(Transactions $transactions)
+    public function destroy(Transaction $transactions)
     {
 
         $transactions->delete();

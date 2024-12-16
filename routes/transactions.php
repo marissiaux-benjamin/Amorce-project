@@ -1,6 +1,6 @@
 <?php
 
-use App\Models\Transactions;
+use App\Models\Transaction;
 
 Route::delete('/comptes', \App\Livewire\Transactions::class)->middleware(['auth', 'verified'])->name('transaction.destroy');
-Route::post('/comptes/{compte}', [Transactions::class, 'store'])->middleware(['auth', 'verified'])->name('transaction.store');
+Route::post('/comptes/{compte}', [Transaction::class, 'store'])->middleware(['auth', 'verified'])->name('transaction.store');
