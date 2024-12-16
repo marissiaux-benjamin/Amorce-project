@@ -16,18 +16,27 @@
             {{ $desc }}
         </p>
         <div class="flex justify-center gap-10 mt-5">
-            <div class="font-medium text-lg">
-                <form>
-                    <button type="submit"
-                            class="bg-[#FCC940] text-[#2E2E2E] rounded-lg py-1 px-10 hover:scale-105 transition-all">
-                        Oui
-                    </button>
-                </form>
-            </div>
-            <button wire:click="closeModal"
-                    class="bg-[#2C2C2C] text-[#FCC940] py-1 px-10 rounded-lg hover:scale-105 transition-all">
-                Non
-            </button>
+            @if($this === 0)
+                <div class="font-medium text-lg">
+                    <form wire:submit="delete()">
+                        <button type="submit"
+                                class="bg-[#FCC940] text-[#2E2E2E] rounded-lg py-1 px-10 hover:scale-105 transition-all">
+                            Oui, clôturer
+                        </button>
+                    </form>
+                </div>
+                <button wire:click="closeModal"
+                        class="bg-[#2C2C2C] text-[#FCC940] py-1 px-10 rounded-lg hover:scale-105 transition-all">
+                    Non
+                </button>
+            @else
+                <div class="font-medium text-lg">
+                    <p class="text-red-500">
+                        Le compte doit être vide
+                    </p>
+                </div>
+            @endif
+
         </div>
     </section>
 </div>
