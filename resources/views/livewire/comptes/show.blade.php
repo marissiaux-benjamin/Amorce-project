@@ -31,7 +31,7 @@
     <livewire:delete-account-modal :$compte
                                    :total="$this->totalAmount"
                                    text="Êtes vous sûr de vouloir supprimer ce compte?"
-                                   desc="Une fois supprimé, l&lsquo;argent restant ira automatiquement dans le Fond Général"/>
+                                   desc="Une fois supprimé, l'argent restant ira automatiquement dans le Fond Général"/>
     <livewire:new-transfer-modal/>
     <livewire:edit-account-modal :$compte/>
 </div>
