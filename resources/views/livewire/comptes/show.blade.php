@@ -13,8 +13,7 @@
             <div
                 class="flex items-center justify-between max-w-3xl bg-[#47B134] rounded-xl pr-8">
                 <div class="flex items-center">
-                    <svg class="shrink-0 ml-4 mr-2 w-4 h-4 fill-white" xmlns="http://www.w3.org/2000/svg"
-                         viewBox="0 0 20 20">
+                    <svg class="shrink-0 ml-4 mr-2 w-4 h-4 fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                         <polygon points="0 11 2 9 7 14 18 3 20 5 7 18"></polygon>
                     </svg>
                     <div class="py-4 text-white text-sm font-medium" x-html="$wire.feedback"></div>

@@ -17,20 +17,26 @@
         </p>
         <div class="flex justify-center gap-10 mt-5">
             @if(number_format($totalAmount[$compte->id]/100,2,',',' ') !== number_format(0,2,',',' ') )
-                <div class="font-medium text-lg flex flex-col">
+                <div class="font-medium text-lg flex flex-col" x-data="{ contents: [] }">
                     <form wire:submit="delete()" class="flex flex-col gap-6">
                         <ul>
                             <li>
                                 <livewire:input-montant-and-select :$compte :total="$this->totalAmount"/>
                             </li>
+                            <template x-for="(content, index) in contents" :key="index">
+                                <li class="mt-2" x-html="content"></li>
+                            </template>
                         </ul>
-                        <button type="reset"
-                            class="w-full p-2 border-2 border-[#C2C2C2] rounded-xl bg-transparent scale transition-all">
+                        <button
+                            @click="contents.push('<input type=\'number\'/><select><option>?</option><option>?</option><option>?</option><option>?</option><option>?</option></select>')"
+
+                            type="button"
+                            class="w-full p-2 border-2 border-[#7C7C7C] rounded-xl group hover:border-[#2E2E2E] scale bg-transparent transition-all">
                             <svg width="20" height="20" viewBox="0 0 26 26" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg" class="ml-auto mr-auto">
-                                <path d="M13 3.25L13 13.25L13 23.25" stroke="currentColor" stroke-width="4"
+                                 xmlns="http://www.w3.org/2000/svg" class="ml-auto mr-auto icon-plus">
+                                <path d="M13 3.25L13 13.25L13 23.25" stroke="" stroke-width="4"
                                       stroke-linecap="round"/>
-                                <path d="M23 13.25H13L3 13.25" stroke="currentColor" stroke-width="4"
+                                <path d="M23 13.25H13L3 13.25" stroke="" stroke-width="4"
                                       stroke-linecap="round"/>
                             </svg>
                         </button>
@@ -40,6 +46,7 @@
                             Clôturer le compte
                         </button>
                     </form>
+
                 </div>
             @elseif(number_format($totalAmount[$compte->id]/100,2,',',' ') === number_format(0,2,',',' '))
                 <div class="font-medium text-lg">
