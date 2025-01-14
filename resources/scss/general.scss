@@ -3,10 +3,16 @@
 .wrapper {
     padding-left: 10%;
     padding-right: 10%;
+    max-width: 80%;
+}
+
+.hidden-titles{
+    visibility: hidden;
+    position: absolute;
 }
 
 .yellow-background {
-    background-color: $main-color;
+    background-color: #FCC940;;
 }
 
 .active {
@@ -16,7 +22,7 @@
 }
 
 .blurred-background {
-    background-color: $dark-button-color;
+    background-color: #2E2E2E;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 }
@@ -46,4 +52,11 @@
 .sticky-own {
     position: sticky;
     top: 10px;
+}
+
+
+@media (min-width: 2500px) {
+    .max-width-block{
+        max-width: 60%;
+    }
 }

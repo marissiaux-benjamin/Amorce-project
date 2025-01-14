@@ -1,10 +1,10 @@
 <section class="flex gap-14 mt-10 mb-16">
-    <h1 class="hidden">
+    <h1 class="hidden-titles">
         Fonds de L'Amorce
     </h1>
     <div class="w-full">
         <div
-            class="relative bg-[#DADADA] text-[#9D9D9D] rounded-2xl py-12 mb-8 shadow-lg border-2 border-[#9D9D9D] scale hover:border-[#2C2C2C] hover:text-[#2C2C2C] group transition-all">
+            class="relative bg-[#DADADA] text-[#9D9D9D] rounded-2xl py-12 mb-8 mr-auto ml-auto max-width-block shadow-lg border-2 border-[#9D9D9D] scale hover:border-[#2C2C2C] hover:text-[#2C2C2C] group transition-all">
             <button title="Importer un fichier" wire:click="dispatchTo('import-file-modal','openModal')"
                     class="absolute top-0 bottom-0 left-0 right-0">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="50" height="50" viewBox="0 0 48 48"
@@ -17,7 +17,7 @@
                 Importer un fichier
             </button>
         </div>
-        <div class="grid md:grid-cols-2 gap-6 w-full">
+        <div class="grid md:grid-cols-2 gap-6 w-full max-width-block mr-auto ml-auto">
             @foreach($comptes as $compte)
                 <a wire:navigate href="/comptes/{{ $compte->id }}" class="scale transition-all">
                     <livewire:grosse-carte :$compte :total="$this->totalAmount" wire:key="comptes-{{$compte->id}}"/>

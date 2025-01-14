@@ -16,7 +16,7 @@
                     <label class="mb-2 text-lg font-bold" for="de">
                         De
                     </label>
-                    <select class="border-2 py-3 px-6 rounded-xl text-[#2E2E2E] bg-transparent" name="de" id="de">
+                    <select class="border-2 py-3 px-6 rounded-xl text-[#2E2E2E]" name="de" id="de">
                         @foreach($comptes as $compte)
                             <option value="{{ $compte->name }}">{{ $compte->name }}</option>
                         @endforeach
@@ -26,7 +26,7 @@
                     <label class="mb-2 text-lg font-bold" for="destination">
                         Vers
                     </label>
-                    <select class="border-2 py-3 px-6 rounded-xl text-[#2E2E2E] bg-transparent" name="destination" id="destination">
+                    <select class="border-2 py-3 px-6 rounded-xl text-[#2E2E2E]" name="destination" id="destination">
                         <option></option>
                         @foreach($comptes as $compte)
                             <option value="{{ $compte->name }}">{{ $compte->name }}</option>

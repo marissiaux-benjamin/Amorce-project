@@ -4,7 +4,7 @@
         {{ $label_text }}*
     </label>
     <input wire:model.blur="{{$field}}" type="{{ $type }}" placeholder="{{ $placeholder }}"
-           class="border-2 py-3 px-6 rounded-xl text-[#2E2E2E] bg-transparent">
+           class="border-2 py-3 px-6 rounded-xl text-[#2E2E2E] bg-white">
     @error("form.name")
     <span class="text-red-500">{{ $message }}</span>
     @enderror

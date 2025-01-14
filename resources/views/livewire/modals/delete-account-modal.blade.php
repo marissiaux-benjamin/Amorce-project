@@ -28,7 +28,7 @@
                             </template>
                         </ul>
                         <button
-                            @click="contents.push('<input type=\'number\'/><select><option>?</option><option>?</option><option>?</option><option>?</option><option>?</option></select>')"
+                            @click="contents.push('<input type=\'number\'/><select>@foreach($comptes as $compte)<option>{{$compte->id}}</option>@endforeach</select>')"
 
                             type="button"
                             class="w-full p-2 border-2 border-[#7C7C7C] rounded-xl group hover:border-[#2E2E2E] scale bg-transparent transition-all">

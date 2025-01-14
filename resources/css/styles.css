@@ -1,6 +1,12 @@
 .wrapper {
   padding-left: 10%;
   padding-right: 10%;
+  max-width: 80%;
+}
+
+.hidden-titles {
+  visibility: hidden;
+  position: absolute;
 }
 
 .yellow-background {
@@ -44,6 +50,12 @@
 .sticky-own {
   position: sticky;
   top: 10px;
+}
+
+@media (min-width: 2500px) {
+  .max-width-block {
+    max-width: 60%;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

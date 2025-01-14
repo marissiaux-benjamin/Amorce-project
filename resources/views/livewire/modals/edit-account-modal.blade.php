@@ -38,7 +38,7 @@
                         Nom*
                     </label>
                     <input wire:model.blur="form.name" type="text" placeholder="nom: Robert Industries"
-                           class="border-2 py-3 px-6 rounded-xl text-[#2E2E2E] bg-transparent">
+                           class="border-2 py-3 px-6 rounded-xl text-[#2E2E2E]">
                     @error("form.name")
                     <span class="text-red-500">{{ $message }}</span>
                     @enderror

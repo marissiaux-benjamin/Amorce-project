@@ -15,6 +15,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/css/styles.css'])
 </head>
 <body class="bg-[#E9E9E9]">
+<h1 class="hidden-titles">l'amorce</h1>
 <x-navigation.main/>
 
 <!-- Page Heading -->
