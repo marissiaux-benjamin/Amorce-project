@@ -11,6 +11,8 @@ class EditAccountModal extends Component
     public $feedback;
     public $compte;
     public $isOpened = false;
+    public ComptesForm $form;
+
     protected $listeners = ['openModal' => 'openModal'];
 
     public function openModal(): void
@@ -23,7 +25,6 @@ class EditAccountModal extends Component
         $this->isOpened = false;
     }
 
-    public ComptesForm $form;
 
     public function mount(Compte $compte)
     {

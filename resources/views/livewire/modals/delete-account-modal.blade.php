@@ -24,11 +24,11 @@
                                 <livewire:input-montant-and-select :$compte :total="$this->totalAmount"/>
                             </li>
                             <template x-for="(content, index) in contents" :key="index">
-                                <li class="mt-2" x-html="content"></li>
+                                <li class="mt-2 flex flex-row justify-between gap-6" x-html="content"></li>
                             </template>
                         </ul>
                         <button
-                            @click="contents.push('<input type=\'number\'/><select>@foreach($comptes as $compte)<option>{{$compte->id}}</option>@endforeach</select>')"
+                            @click="contents.push('<input wire:model.blur=\'\' type=\'text\' placeholder=\'20\' class=\'border-2 py-2 px-6 rounded-xl text-[#2E2E2E] w-1/3 mr-6\'/><select class=\'border-2 py-2 px-6 rounded-xl text-[#2E2E2E] flex-auto\'>@foreach($comptes as $compte)@if($compte->name !== $currentCompteName)<option wire:key=\'select-{{$compte->name}}\'>{{$compte->name}}</option>@endif@endforeach</select>')"
 
                             type="button"
                             class="w-full p-2 border-2 border-[#7C7C7C] rounded-xl group hover:border-[#2E2E2E] scale bg-transparent transition-all">
@@ -40,14 +40,12 @@
                                       stroke-linecap="round"/>
                             </svg>
                         </button>
-                        <button
-                            type="submit"
-                            class="bg-[#FCC940] text-[#2E2E2E] rounded-lg py-1 px-10 hover:scale-105 transition-all">
+                        <p class="bg-[#C2C2C2] text-[#2E2E2E] rounded-lg py-1 px-10 cursor-pointer">
                             Clôturer le compte
-                        </button>
+                        </p>
                     </form>
-
                 </div>
+                <!--TODO la ligne 52, remplacer la condition par la somme de la veleur des inputs doit être égale au total amount du compte.-->
             @elseif(number_format($totalAmount[$compte->id]/100,2,',',' ') === number_format(0,2,',',' '))
                 <div class="font-medium text-lg">
                     <form wire:submit="delete()">

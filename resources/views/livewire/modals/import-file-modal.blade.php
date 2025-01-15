@@ -15,7 +15,7 @@
                 <label for="file" class="mb-2 text-lg font-bold">
                     Ficher&nbsp;:
                 </label>
-                <input wire:model.blur="" type="file" name="file" id="file" class="border-2 border-[#2E2E2E] py-3 px-6 rounded-xl text-[#2E2E2E] bg-transparent">
+                <input wire:model.blur="" type="file" name="file" id="file" class="border-2 border-[#2E2E2E] py-3 px-6 rounded-xl text-[#2E2E2E] bg-white">
             </div>
 
             <x-buttons.form-button text="Enregistrer"/>

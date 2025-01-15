@@ -25,7 +25,6 @@
             @endforeach
             <livewire:add-account-button/>
         </div>
-
     </div>
     <livewire:add-account-modal/>
     <livewire:import-file-modal/>

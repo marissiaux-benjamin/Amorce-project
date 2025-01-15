@@ -24,7 +24,7 @@ class  Index extends Component
     }
 
     #[On('accountCreated')]
-    public function createNewAccount()
+    public function accountCreated()
     {
         $this->comptes = Compte::all();
     }

@@ -1,5 +1,5 @@
 <div class="relative max-width-block ml-auto mr-auto">
-    <livewire:back-button/>
+    <livewire:back-button route="comptes.index"/>
     <livewire:compte-details :$compte :total="$this->totalAmount"/>
     <div content="" class="m-auto w-full h-1 rounded-full mt-8 mb-16 bg-[rgba(46,46,46,0.20)]"></div>
     <template x-if="$wire.feedback" class="sticky-own">

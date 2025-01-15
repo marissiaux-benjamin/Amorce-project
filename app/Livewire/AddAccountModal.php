@@ -9,8 +9,8 @@ class AddAccountModal extends Component
 {
     public $feedback;
     public $compte;
-    public ComptesForm $form;
     public $isOpened = false;
+    public ComptesForm $form;
     protected $listeners = ['openModal' => 'openModal'];
 
     public function openModal(): void
