@@ -21,6 +21,7 @@ class CompteDetails extends Component
         $this->comptesData = Compte::all();
         $this->compte = $compte;
         $this->id = $compte->id;
+        $this->total = $this->compte->transactions->sum('montant');
     }
 
     #[On('accountUpdated')]
@@ -29,8 +30,16 @@ class CompteDetails extends Component
         $this->compte = Compte::find($id);
     }
 
+    #[On('totalAmountUpdated')]
+    public function updateTotal($total)
+    {
+        $this->total = $total;
+    }
+
     public function render()
     {
-        return view('livewire.compte-details');
+        return view('livewire.compte-details', [
+            'total' => $this->total,
+        ]);
     }
 }

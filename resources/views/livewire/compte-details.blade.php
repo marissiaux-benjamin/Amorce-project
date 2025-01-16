@@ -4,7 +4,7 @@
             {{ $compte->name }}
         </h1>
         <p class="font-bold text-4xl">
-            <span class="text-2xl"> Total&nbsp;: </span>{{ number_format($total[$compte->id]/100,2,',',' ') ?? 0 }} €
+            <span class="text-2xl"> Total&nbsp;: </span> {{ number_format($total / 100, 2, ',', ' ') ?? 0 }} €
         </p>
         @if($compte->id !== 1 && $compte->id !== 2)
             <div class="flex gap-6">

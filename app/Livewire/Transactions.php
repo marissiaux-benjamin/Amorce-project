@@ -5,6 +5,7 @@ namespace App\Livewire;
 use App\Models\Compte;
 use App\Models\Transaction;
 use Livewire\Attributes\Computed;
+use Livewire\Attributes\On;
 use Livewire\Component;
 use Livewire\WithPagination;
 
@@ -17,7 +18,7 @@ class Transactions extends Component
 
     public $transaction;
 
-    protected $listeners = ['transactionDeleted'=>'transactionDeleted'];
+    protected $listeners = ['transactionDeleted' => 'transactionDeleted'];
     public string $feedback;
 
 
@@ -36,12 +37,14 @@ class Transactions extends Component
             ->paginate(10);
     }
 
+    #[On('transactionDeleted')]
     public function transactionDeleted()
     {
         $this->feedback = "La transactions a bien été supprimée !";
         $this->dispatch('totalAmount');
+        $total = $this->compte->transactions->sum('montant');
+        $this->dispatch('totalAmountUpdated', $total);
     }
-
 
 
     public function render()

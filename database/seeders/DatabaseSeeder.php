@@ -42,6 +42,5 @@ class DatabaseSeeder extends Seeder
         }
 
         Projet::factory(15)->create();
-
     }
 }
