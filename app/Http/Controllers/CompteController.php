@@ -29,15 +29,8 @@ class CompteController extends Controller
 
     public function create()
     {
-
         return view('livewire.modals.add-account-modal');
     }
 
-    public function destroy(Compte $compte)
-    {
 
-        $compte->delete();
-
-        return to_route('comptes.index');
-    }
 }

@@ -3,11 +3,8 @@
 namespace App\Livewire\Comptes;
 
 use App\Livewire\forms\TransactionsForm;
-use App\Livewire\Transactions;
 use App\Models\Compte;
-use App\Models\Transaction;
 use Livewire\Attributes\Computed;
-use Livewire\Attributes\On;
 use Livewire\Component;
 use Livewire\WithPagination;
 

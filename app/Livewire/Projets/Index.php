@@ -2,7 +2,7 @@
 
 namespace App\Livewire\Projets;
 
-use App\Models\Projets;
+use App\Models\Projet;
 use Livewire\Attributes\Computed;
 use Livewire\Component;
 use Livewire\WithPagination;
@@ -16,17 +16,17 @@ class Index extends Component
 
     public function mount()
     {
-        $this->projets = Projets::all();
+        $this->projets = Projet::all();
     }
 
     public function updateStatus($projetId, $newStatus)
     {
-        $projet = Projets::find($projetId);
+        $projet = Projet::find($projetId);
         if ($projet) {
             $projet->status = $newStatus;
             $projet->save();
 
-            $this->projets = Projets::all();
+            $this->projets = Projet::all();
 
         }
     }

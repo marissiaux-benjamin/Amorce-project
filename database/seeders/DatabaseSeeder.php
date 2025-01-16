@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Compte;
-use App\Models\Projets;
+use App\Models\Projet;
 use App\Models\Transaction;
 use App\Models\transactions_comptes;
 use App\Models\User;
@@ -41,7 +41,7 @@ class DatabaseSeeder extends Seeder
             $transaction->save();
         }
 
-        Projets::factory(15)->create();
+        Projet::factory(15)->create();
 
     }
 }

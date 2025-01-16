@@ -3,10 +3,8 @@
 namespace App\Livewire;
 
 use App\Models\Compte;
-use App\Models\Transaction;
 use App\Models\Transaction as TransactionsAlias;
 use App\Livewire\forms\TransactionsForm;
-use Livewire\Attributes\On;
 use Livewire\Component;
 
 class DeleteTransactionModal extends Component

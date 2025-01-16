@@ -23,6 +23,6 @@ class ComptesCreate extends Component
     public function update()
     {
         $this->validate();
-        $this->organization->update($this->except('compte'));
+        $this->compte->update($this->except('compte'));
     }
 }

@@ -6,6 +6,9 @@
     <section class="">
         <h1 class="hidden-titles">&Eacute;ligibles&nbsp;</h1>
         <ul class="py-8 px-10">
+            <li>
+                <livewire:add-projet-button/>
+            </li>
             @foreach ($projets as $projet)
                 <li class="flex gap-10 justify-between mb-10 bg-[#DADADA] rounded-xl px-10 py-6 items-center">
                     <a wire:navigate href="/projets/{{ $projet->id }}" class="hover:no-underline  transition-all underline" title="Aller vers la page du projet détaillé">{{ $projet->name }}</a>
@@ -30,9 +33,7 @@
                 </li>
             @endforeach
         </ul>
-
     </section>
-
-
+    <livewire:add-projet-modal/>
 </section>
 

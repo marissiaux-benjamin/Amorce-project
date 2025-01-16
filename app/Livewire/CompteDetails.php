@@ -3,6 +3,7 @@
 namespace App\Livewire;
 
 use App\Models\Compte;
+use Livewire\Attributes\Computed;
 use Livewire\Attributes\On;
 use Livewire\Component;
 
