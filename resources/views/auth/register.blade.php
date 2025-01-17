@@ -4,12 +4,12 @@
         Enregistrer-vous
     </h1>
 
-    <form method="POST" action="{{ route('register') }}">
+    <form method="POST" action="{{ route('comptes.index') }}">
         @csrf
 
         <!-- Name -->
         <div>
-            <x-input-label for="name" :value="__('Prénom')"/>
+            <label for="name">Prénom</label>
             <x-text-input placeholder="ex: Robert"
                           id="name" class="block mt-1 w-full" type="text" name="name"
                           :value="old('name')" required
@@ -18,7 +18,7 @@
         </div>
 
         <div class="mt-4">
-            <x-input-label for="surname" :value="__('Nom')"/>
+            <label for="surname">Nom</label>
             <x-text-input placeholder="ex: De Neuville"
                           id="surname" class="block mt-1 w-full" type="text"
                           name="surname" :value="old('surname')" required
@@ -28,7 +28,7 @@
 
         <!-- Email Address -->
         <div class="mt-4">
-            <x-input-label for="email" :value="__('Email')"/>
+            <label for="email">Email</label>
             <x-text-input placeholder="ex: robertdeneuville@gmail.com"
                           id="email" class="block mt-1 w-full" type="email"
                           name="email" :value="old('email')"
@@ -38,8 +38,7 @@
 
         <!-- Password -->
         <div class="mt-4">
-            <x-input-label for="password" :value="__('Password')"/>
-
+            <label for="password">Mot de passe</label>
             <x-text-input placeholder="ex: Ch4nG3_tH1s"
                           id="password" class="block mt-1 w-full"
                           type="password"
@@ -50,7 +49,7 @@
         </div>
 
         <div class="flex items-center justify-center mt-8">
-            <x-primary-button class="">
+            <x-primary-button>
                 {{ __('S\'enregistrer') }}
             </x-primary-button>
         </div>

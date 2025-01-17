@@ -16,6 +16,8 @@
 
         @csrf
 
-        <button type="submit" class="px-4 py-1 bg-red-500 text-[#FFFFFF] rounded-lg hover:scale-105 transition-all">Se Déconnecter</button>
+        <button type="submit" class="px-4 py-1 bg-red-500 text-[#FFFFFF] rounded-lg hover:scale-105 transition-all">Se
+            Déconnecter
+        </button>
     </form>
 </div>

@@ -15,6 +15,7 @@ class Show extends Component
     public $comptes;
 
     public $compte;
+
     public $search;
 
     public $transaction;

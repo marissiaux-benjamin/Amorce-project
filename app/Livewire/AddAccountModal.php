@@ -27,7 +27,6 @@ class AddAccountModal extends Component
     {
         $this->form->create();
         $this->feedback = "Le compte a bien été créé !";
-        $this->dispatch('accountCreated');
     }
 
     public function render()

@@ -2,9 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Enums\ProjectStatus;
 use App\Models\Projet;
-use Illuminate\Http\Request;
 
 class ProjetsController extends Controller
 {

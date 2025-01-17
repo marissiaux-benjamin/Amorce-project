@@ -19,7 +19,7 @@ class Index extends Component
 
     public function mount()
     {
-        $this->projets = Projet::orderBy('name')->get();
+        $this->projets = Projet::orderBy('name','asc')->get();
     }
 
     public function updateStatus($projetId, $newStatus)
@@ -28,9 +28,7 @@ class Index extends Component
         if ($projet) {
             $projet->status = $newStatus;
             $projet->save();
-
-            $this->projets = Projet::all();
-
+            $this->projets = Projet::orderBy('name','asc')->get();
         }
     }
 
@@ -51,7 +49,7 @@ class Index extends Component
             ->searchProject()
             ->filter(['search' => $this->search])
             ->paginate(10)
-            ->orderBy('name');
+            ->orderBy('name','asc');
     }
 
     public function render()

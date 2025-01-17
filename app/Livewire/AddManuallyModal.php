@@ -2,11 +2,16 @@
 
 namespace App\Livewire;
 
+use App\Livewire\forms\TransactionsForm;
+use App\Models\Compte;
 use Livewire\Component;
 
 class AddManuallyModal extends Component
 {
     public $isOpened = false;
+    public $feedback;
+    public TransactionsForm $form;
+    public $currentAccount;
     protected $listeners = ['openModal' => 'openModal'];
 
 
@@ -18,6 +23,13 @@ class AddManuallyModal extends Component
     public function closeModal(): void
     {
         $this->isOpened = false;
+    }
+
+    public function save()
+    {
+        $this->form->create();
+        $this->feedback = "La transaction a bien été créée !";
+        $this->dispatch('transactionCreated');
     }
 
     public function render()
