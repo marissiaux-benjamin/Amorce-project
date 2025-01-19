@@ -22,7 +22,7 @@
     </template>
     <section class="w-full grid mt-10 mb-5">
         <h1 class="hidden">transactions</h1>
-        <table class="border-separate border-spacing-y-5">
+        <table class="border-separate border-spacing-y-5 w-full">
             <thead>
             <tr class="text-left font-bold">
                 <th class="pr-32 pl-10">Date</th>

@@ -1,6 +1,6 @@
 <div class="relative max-width-block ml-auto mr-auto">
     <livewire:back-button route="comptes.index"/>
-    <livewire:compte-details :$compte :total="$this->totalAmount" />
+    <livewire:compte-details :$compte :total="$this->totalAmount"/>
     <div content="" class="m-auto w-full h-1 rounded-full mt-8 mb-16 bg-[rgba(46,46,46,0.20)]"></div>
     <template x-if="$wire.feedback" class="sticky-own">
         <div x-data="{
@@ -23,7 +23,7 @@
         </div>
     </template>
     <div class="flex flex-wrap justify-between gap-5">
-        <div class="w-1/2">
+        <div class="w-full sm:w-1/2">
             <form x-data="{searchButton:true}" class="flex w-full rounded-xl">
                 <div class="w-full relative rounded-xl">
                     <input

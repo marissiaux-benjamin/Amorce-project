@@ -23,7 +23,7 @@ class AddAccountModal extends Component
         $this->isOpened = false;
     }
 
-    public function save(): void
+    public function save()
     {
         $this->form->create();
         $this->feedback = "Le compte a bien été créé !";

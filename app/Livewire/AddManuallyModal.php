@@ -8,6 +8,7 @@ use Livewire\Component;
 
 class AddManuallyModal extends Component
 {
+    public Compte $compte;
     public $isOpened = false;
     public $feedback;
     public TransactionsForm $form;
@@ -25,9 +26,10 @@ class AddManuallyModal extends Component
         $this->isOpened = false;
     }
 
-    public function save()
+    public function save(Compte $compte)
     {
-        $this->form->create();
+        $this->compte = $compte;
+        $compte->transactions()->create();
         $this->feedback = "La transaction a bien été créée !";
         $this->dispatch('transactionCreated');
     }

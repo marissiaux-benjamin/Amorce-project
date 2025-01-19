@@ -1,9 +1,9 @@
 <section class="mt-10">
-    <div class="flex justify-between items-center px-10 w-full mb-8">
-        <h1 class="w-1/2 font-bold text-4xl">
+    <div class="flex flex-wrap justify-between items-center px-10 w-full mb-8">
+        <h1 class="w-full mb-6 font-bold text-3xl lg:w-1/2 md:text-4xl lg:mb-0">
             Liste des projets
         </h1>
-        <form x-data="{searchButton:true}" class="flex h-fit w-1/2 rounded-xl">
+        <form x-data="{searchButton:true}" class="flex h-fit w-full rounded-xl lg:w-1/2">
             <div class="relative rounded-xl w-full">
                 <input
                     class="w-full border-none bg-[#D9D9D9] text-[#2E2E2E] placeholder:opacity-70 placeholder-grey-300 relative pl-10 pr-6 py-2 rounded-l-lg"
@@ -38,13 +38,15 @@
             </li>
             @foreach ($projets as $projet)
                 <li wire:key="li-{{$projet->name}}"
-                    class="flex gap-10 justify-between mb-10 bg-[#DADADA] rounded-xl px-10 py-6 items-center">
-                    <a wire:navigate href="/projets/{{ $projet->id }}"
-                       class="hover:no-underline  transition-all underline"
-                       title="Aller vers la page du projet détaillé">{{ $projet->name }}</a>
-                    <p>Statut actuel : <strong>{{ $projet->status }}</strong></p>
+                    class="mb-10 bg-[#DADADA] rounded-xl px-10 py-6 items-center">
+                    <div class="flex flex-wrap justify-center gap-6 mb-8 md:gap-24 lg:gap-32">
+                        <a wire:navigate href="/projets/{{ $projet->id }}"
+                           class="hover:no-underline  transition-all underline"
+                           title="Aller vers la page du projet détaillé">{{ $projet->name }}</a>
+                        <p>Statut actuel : <strong>{{ $projet->status }}</strong></p>
+                    </div>
 
-                    <form wire:submit.prevent="updateStatus({{ $projet->id }}, $event.target.status.value)">
+                    <form wire:submit.prevent="updateStatus({{ $projet->id }}, $event.target.status.value)" class="text-center">
                         @csrf
                         @method('PATCH')
                         <select name="status" class="border-2 rounded-xl mr-4">

@@ -62,5 +62,112 @@
     max-width: 60%;
   }
 }
+@media (max-width: 800px) {
+  .mobile-menu {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2em;
+    top: 0;
+    background-color: #FCC940;
+    left: 0;
+    right: 0;
+    height: 80px;
+    z-index: 9999999;
+  }
+  .mobile-menu__btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 30px;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+  .mobile-menu__icon {
+    display: block;
+    position: relative;
+    background: #2E2E2E;
+    width: 90%;
+    height: 4px;
+    transition: 0.4s;
+  }
+  .mobile-menu__icon::after, .mobile-menu__icon::before {
+    content: "";
+    display: block;
+    position: absolute;
+    background: #2E2E2E;
+    width: 100%;
+    height: 4px;
+    transition: 0.4s;
+  }
+  .mobile-menu__icon::after {
+    top: 8px;
+  }
+  .mobile-menu__icon::before {
+    top: -8px;
+  }
+  .mobile-menu__container {
+    position: fixed;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 50px;
+    left: 0;
+    right: 0;
+    z-index: 0;
+    height: 0;
+    opacity: 1;
+    transition: 0.5s;
+    transition-delay: 0.2s;
+    overflow: hidden;
+    background-color: #FCC940;
+  }
+  .mobile-menu__list {
+    text-align: center;
+    transition: 0.5s;
+    transition-delay: 0.5s;
+    list-style: none;
+    margin-top: -50px;
+    padding-left: 0;
+    flex-direction: column;
+    gap: 2em;
+  }
+  .mobile-menu__item {
+    font-size: 26px;
+    padding-bottom: 15px;
+    position: unset;
+  }
+  .mobile-menu__link {
+    text-decoration: none;
+    margin-left: 0;
+  }
+  .mobile-menu__checkbox {
+    display: none;
+  }
+  .mobile-menu__checkbox:checked ~ .mobile-menu__nav {
+    opacity: 1;
+    transition-delay: 0s;
+  }
+  .mobile-menu__checkbox:checked ~ .mobile-menu__container {
+    height: 100%;
+    transition-delay: 0s;
+  }
+  .mobile-menu__checkbox:checked ~ .mobile-menu__btn__icon {
+    background: transparent;
+  }
+  .mobile-menu__checkbox:checked ~ .mobile-menu__btn__icon::before, .mobile-menu__checkbox:checked ~ .mobile-menu__btn__icon::after {
+    top: 0;
+  }
+  .mobile-menu__checkbox:checked ~ .mobile-menu__btn__icon::after {
+    transform: rotate(-45deg);
+  }
+  .mobile-menu__checkbox:checked ~ .mobile-menu__btn__icon::before {
+    transform: rotate(45deg);
+  }
+}
 
 /*# sourceMappingURL=styles.css.map */
