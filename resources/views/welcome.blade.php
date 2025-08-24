@@ -20,8 +20,7 @@
         </div>
         <div class="flex gap-x-10 justify-center">
             <x-buttons.link url_route="{{ route('login') }}" bg_color="bg-[#E9E9E9]" text="Se connecter" text_color="text-[#2E2E2E]"/>
-            <x-buttons.link url_route="{{ route('register') }}" bg_color="bg-[#2E2E2E]" text="S'enregistrer" text_color="text-[#FCC940]"/>
-        </div>
+         </div>
     </main>
 </div>
 </body>

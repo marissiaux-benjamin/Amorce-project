@@ -10,12 +10,17 @@
     <section class="flex flex-col justify-center w-1/2 h-full bg-[#E9E9E9] px-16 relative">
         <h1 class="font-bold text-6xl mb-8">Ajout d'un fichier</h1>
         <x-buttons.cross-button route="{{ route('comptes.index') }}" position_x="top-8" position_y="left-16"/>
-        <form wire:submit="save">
+        <form wire:submit="save" wire:submit.prevent="import">
             <div class="flex flex-col">
-                <label for="file" class="mb-2 text-lg font-bold">
+                <label for="csvFile" class="mb-2 text-lg font-bold">
                     Ficher&nbsp;:
                 </label>
-                <input wire:model.blur="" type="file" name="file" id="file" class="border-2 border-[#2E2E2E] py-3 px-6 rounded-xl text-[#2E2E2E] bg-white">
+                <input wire:model.blur="csvFile"
+                       type="file"
+                       accept=".csv"
+                       name="csvFilefile"
+                       id="csvFile"
+                       class="border-2 border-[#2E2E2E] py-3 px-6 rounded-xl text-[#2E2E2E] bg-white">
             </div>
 
             <x-buttons.form-button text="Enregistrer"/>
