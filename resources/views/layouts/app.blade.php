@@ -11,8 +11,7 @@
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet"/>
 
-    <!-- Scripts -->
-    @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/css/styles.css'])
+
 </head>
 <body class="bg-[#E9E9E9]">
 <h1 class="hidden-titles">l'amorce</h1>
