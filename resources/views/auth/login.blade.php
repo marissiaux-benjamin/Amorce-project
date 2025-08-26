@@ -9,7 +9,6 @@
         <!-- Email Address -->
         <div>
 
-            <!--<x-input-label for="email" :value="__('Email')"/>-->
             <label for="email">email</label>
             <x-text-input placeholder="ex: robertdeneuville@gmail.com" id="email" class="block mt-1 w-full" type="email"
                           name="email" :value="old('email')" required
