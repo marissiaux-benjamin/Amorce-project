@@ -6,11 +6,8 @@
 
     <form method="POST" action="{{ route('login') }}">
         @csrf
-
-
         <!-- Email Address -->
         <div>
-            <!--TODO refaire les input de mail avec validation etc-->
 
             <!--<x-input-label for="email" :value="__('Email')"/>-->
             <label for="email">email</label>
@@ -22,7 +19,6 @@
 
         <!-- Password -->
         <div class="mt-4">
-            <x-input-label for="password" :value="__('Password')"/>
 
             <label for="password">mot de passe</label>
             <x-text-input placeholder="ex:Ch4nG3_tH1s" id="password" class="block mt-1 w-full"
