@@ -1,6 +1,6 @@
 <?php
 
-namespace App\View\Components\navigation;
+namespace App\View\Components\Navigation;
 
 use Closure;
 use Illuminate\Contracts\View\View;
@@ -28,9 +28,7 @@ class Main extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.navigation.main', [
-            'links' => $this->links,
-        ]);
+        return view('components.navigation.main');
 
     }
 }
