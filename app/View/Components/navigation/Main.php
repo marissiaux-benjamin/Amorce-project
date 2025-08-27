@@ -8,11 +8,13 @@ use Illuminate\View\Component;
 
 class Main extends Component
 {
+
+    public array $links = [];
+
     /**
      * Create a new component instance.
      */
-    public function __construct(
-        public array  $links = [])
+    public function __construct()
     {
         $this->links = [
             ['name' => 'Comptes', 'url' => '/comptes'],
@@ -26,6 +28,9 @@ class Main extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.navigation.main');
+        return view('components.navigation.main', [
+            'links' => $this->links,
+        ]);
+
     }
 }
