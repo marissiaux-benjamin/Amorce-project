@@ -1,4 +1,4 @@
-<div class="bg-[#FCC940] mb-32">
+<div class="bg-[#FCC940] mb-16">
     <nav x-data="{ open: false }" class="h-20 mobile-menu flex justify-start items-center pl-10 pr-10 relative">
         <h1 class="opacity-0 absolute">Navigation principale</h1>
         <x-application-logo/>
